@@ -19,6 +19,7 @@ $(document).ready(function () {
     };
 
     postTreat(newTreat);
+    console.log("new treat: ", newTreat);
   });
 
   /**---------- AJAX Functions ----------**/

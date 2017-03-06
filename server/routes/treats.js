@@ -35,7 +35,7 @@ router.get('/', function(req, res){
 // POST /treats expects a treat type, description, and the path/url for the image.
 // Take a look at the /server/public/assets folder for which images we have to work with.
 
-router.post('/new', function(req, res){
+router.post('/', function(req, res){
   var addNewTreat = req.body;
   pool.connect(function(errorConnectingToDatabase, client, done){
     if(errorConnectingToDatabase) {
