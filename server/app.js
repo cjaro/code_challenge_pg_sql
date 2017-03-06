@@ -5,8 +5,12 @@ var port = process.env.PORT || 3000;
 
 /*** Build out a module to manage our treats requests. ***/
 
+var bodyParser = require('body-parser');
+var treats = require('./routes/treats.js');
 
+app.use(bodyParser.urlencoded({extended: true})); //must have it - this creates req.body
 
+app.use('/treats', treats);
 
 // Get static files
 app.use(express.static('./server/public'));
